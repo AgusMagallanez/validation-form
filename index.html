@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <div id="main-form-container">
+      <h2 class="main-form-title">Registration Form</h2>
+
+      <form id="main-form" novalidate>
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          minlength="3"
+          required
+          autocomplete="off"
+        />
+        <div class="error" id="errorName"></div>
+        <br />
+
+        <label for="lastname">Last Name:</label>
+        <input
+          type="text"
+          id="lastname"
+          name="lastname"
+          minlength="3"
+          required
+          autocomplete="off"
+        />
+        <div class="error" id="errorLastname"></div>
+        <br />
+
+        <label for="identification">ID documentation: </label>
+        <input
+          type="text"
+          id="identification"
+          name="identification"
+          minlength="7"
+          required
+        />
+        <div class="error" id="errorIdentification"></div>
+        <br />
+
+        <label for="email">Email: </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          autocomplete="off"
+        />
+        <div class="error" id="errorEmail"></div>
+        <br />
+
+        <label for="age">Age: </label>
+        <input type="number" id="age" name="age" />
+        <div class="error" id="errorAge"></div>
+        <br />
+
+        <label for="ocupation">Ocupation: </label>
+        <select name="ocupation" id="ocupation">
+          <option value="">Select...</option>
+          <option value="software development">Software Development</option>
+          <option value="telecommunication ">telecommunication</option>
+          <option value="artificial intelligence">
+            IA (Artificial Inteligence)
+          </option>
+          <option value="education">Education</option>
+          <option value="data scientist">Data Scientist</option>
+          <option value="other">Other</option>
+        </select>
+        <div class="error" id="errorOcupation"></div>
+        <br />
+
+        <label for="education">Education: </label>
+        <select name="education" id="education">
+          <option value="">Select...</option>
+          <option value="associate">Associate</option>
+          <option value="bachelors">Bachelor's</option>
+          <option value="masters">Master's</option>
+          <option value="doctoral">Doctoral</option>
+          <option value="other">Other</option>
+        </select>
+        <div class="error" id="errorEducation"></div>
+        <br />
+
+        <label class="inline">
+          <input type="checkbox" name="t&cs" id="t&cs" required />
+          Terms and Conditions
+        </label>
+        <div class="error" id="errorTerms"></div>
+        <br />
+
+        <label class="inline">Newsletter</label>
+        <label class="inline" for="offers">Offers</label>
+        <input type="checkbox" name="newsletter" id="ads" value="ads" />
+        <label class="inline" for="news">News</label>
+        <input type="checkbox" name="newsletter" id="news" value="news" />
+        <label class="inline" for="updates">Important Updates</label>
+        <input type="checkbox" name="newsletter" id="updates" value="updates" />
+        <div class="error" id="errorNewsletter"></div>
+        <br />
+
+        <input type="submit" value="Register" />
+      </form>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
